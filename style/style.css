@@ -1,0 +1,358 @@
+/**************
+METTRE ICI LA SURCHARGE DES STYLE MATERIALIZE.CSS
+*********/
+
+body {
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	background-color: #E5E5E5;
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+}
+
+/*--------------------------------------------------------------------*/
+/* Materialize */
+
+.btn-floating.btn-xlarge {
+  width: 65.5px;
+  height: 65.5px;
+}
+.btn-xlarge {
+  height: 89px;
+  line-height: 89px;
+}
+.btn-xlarge i {
+  font-size: 2.2rem;
+}
+.modal.bottom-sheet {
+  max-height: 80%;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+/*--------------------------------------------------------------------*/
+/* COLORS */
+.blue-boccard {
+	background-color: #009ae0 !important;
+}
+
+/*--------------------------------------------------------------------*/
+/*Search bar*/
+#search-bar {
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: #fff;
+    display: inline-block;
+    font-size: 1em;
+    line-height: 1em;
+    height: 40px;
+    padding-right: 10px;
+    padding-left: 15px;
+    margin-left: 95px;
+    width: 80%;
+}
+
+#search-bar i {
+	position: relative;
+	top: 6px;
+	display: inline;
+	font-size: 1.5rem;
+	line-height: 30px;
+}
+
+#search-bar a {
+	float: right;
+	padding-top: 12px;
+}
+
+#search-bar input {
+	border: none;
+	background: none;
+	font-size: 1em;
+	color: #fff;
+	width: 80%;
+	height: 1rem;
+}
+
+
+#search-bar form {
+	width: 60%;
+	display: inline-flex;
+}
+
+
+/*------------------------------------------------------------------*/
+/*Side bar*/
+
+.side-nav{
+	top:64px;
+	width: 300px;
+	height: 100% !important;
+	border-top: 0 !important;
+	border-left: 0 !important;
+	border-right: 0 !important;
+}
+
+
+.side-nav img {
+	position: relative;
+	right: 20px;
+	width: 210px;
+}
+
+.side-nav .collapsible-header{
+
+}
+.side-nav .collapsible-header:hover,
+.side-nav.fixed .collapsible-header:hover {
+  background-color: #bbdefb ;
+}
+.side-nav .collapsible-body a{
+	padding-left:45px;
+}
+.side-nav .collapsible-body a.active{
+	background:#1976D2;
+}
+.side-nav .collapsible-body i{
+	line-height: 60px;
+}
+
+.side-nav li.footer{
+	position:absolute;
+	bottom:110px;
+	text-align:center;
+	width:100%;
+	color:white;
+	text-shadow: 1px 1px 1px #000;
+}
+
+/*------------------------------------------------------------------*/
+/* Profile*/
+
+.side-nav li.profile{
+    height: 100px;
+    line-height: 100px;
+}
+
+.side-nav li.profile .username{
+    text-transform: capitalize;
+    font-size: 15px;
+	line-height: 75px;
+	height: 50px;
+}
+.side-nav li.profile .grade{
+	line-height: 0;
+	font-size: 1em;
+	font-style: italic;
+}
+
+#span_profil_session{
+	font-weight:bold;
+}
+
+/*------------------------------------------------------------------*/
+/* contenu*/
+
+.contenu{
+	margin-left: 300px;
+	padding:1vw;
+}
+
+.mainCard.withNav{
+	margin: 5px auto 25px auto;
+	width: 98%;
+}
+
+@media screen and (max-width: 993px) {
+	.contenu{
+		margin-left: 0px;
+		width:100%;
+	}
+
+	.contenu>.card{
+		margin-top:10px;
+	}
+}
+
+.mainCard.withoutNav{
+	margin: 0;
+	width:100%;
+}
+
+.cardContent{
+	padding: 0 15px 30px 15px;
+}
+
+
+.cardTitle {
+	background-color: #2196F3;
+	color: #fff;
+	width: 100%;
+	height: 80px;
+	padding: 12px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1.2em;
+}
+.cardTitle.small {
+	background-color: #2196F3;
+	color: #fff;
+	width: 100%;
+	height: 46px;
+	line-height: 23px;
+	padding: 12px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1.2em;	
+}
+
+.card-login {
+	background-color: #fff;
+	padding: 0 0 30px 0;
+	width:300px !important;
+}
+
+.card-login form {
+	margin: 30px;
+}
+
+.card-login button {
+	margin-top: 15px;
+}
+
+h2{
+       border-color:#2196F3 !important;
+       border-bottom:1px solid #eee;
+       font-size:	30px !important;
+       font-variant:small-caps;
+       padding:5px;
+       text-align:left;
+       border-left: 5px solid #ee6e73;
+}
+
+h2 i{
+	 font-variant:none !important;
+}
+
+h3{
+       border-color:#2196F3 !important;
+       border-bottom:1px solid #eee;
+       font-size:	20px !important;
+       padding:5px;
+       text-align:center;
+       margin:auto;
+       width:50%;
+}
+
+h5{
+	text-align:center;
+	padding:5px;
+}
+
+hr{
+    margin: 40px 0;
+}
+
+label.header{
+	background: #2196F3;
+    display: block;
+    width: 90%;
+    font-weight: bold;
+    color: #fff;
+}
+
+table th{
+	text-align: center;
+}
+
+table.highlight > tbody > tr:hover:not(:first-child) {
+  background-color: #fff59d  !important;
+}
+
+
+/*//////////SWITCH///////*/
+
+.align_input{
+	margin-top: 2rem !important;
+	height: 3rem !important;
+}
+
+.switch label input[type=checkbox]:checked+.lever {
+	background-color : #2196F3 !important;
+}
+
+.switch label input[type=checkbox]:checked+.lever:after{
+	background-color : #1976D2 !important;
+}
+
+/* Datepicker */
+
+.picker__date-display{
+	background-color : #2196F3 !important;
+}
+
+.picker__weekday-display{
+	background-color : #1976D2  !important;
+}
+
+/*label*/
+
+label{
+	color:#000 !important;
+	font-size:18px !important;
+	font-weight:bold !important;
+	margin-top: 6px !important;
+}
+
+.input-field .prefix.active {
+  color: #000000 !important;
+}
+
+.select-wrapper input.select-dropdown:disabled, input[type=text]:disabled, textarea.materialize-textarea:disabled{
+	color:#999;
+}
+
+.move{
+	cursor:move;
+}
+
+i.icon-red {
+    color: red;
+}
+
+
+i.icon-green {
+    color: green;
+}
+
+i.icon-excel{
+	color:#02723b;
+}
+
+.clickable {
+	cursor:pointer;
+	vertical-align: baseline;
+}
+
+
+
+ .egencia li{
+	line-height:25px !important;
+	
+}
+ 
+.left-footer{
+  height: 50%;
+  padding-top: 30%;
+  position: relative !important;
+  bottom: 10px;
+}
+:-moz-placeholder { color: #666666 !important; } /* Firefox <= 18 */
+::-moz-placeholder { color: #666666 !important; } /* Firefox >= 19 */
+::-webkit-input-placeholder { color: #666666 !important; }
+:-ms-input-placeholder{ color: #666666 !important; } /* IE */

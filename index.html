@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Clone Js </title>
+ 		<!--Import Google Icon Font-->
+        <link href="/style/material_icons.css" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link href="/style/main.css" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="/style/materialize.css"  media="screen,projection,print"/>
+		<link type="text/css" rel="stylesheet" href="/style/nouislider.min.css"  media="screen,projection,print"/>
+        <link type="text/css" rel="stylesheet" href="/style/style.css" media="screen,projection,print">
+      
+</head>
+<body>
+
+<div id="div_hebergement" class="row" >
+		<h2><b>hebergement</b></h2>
+
+		<div class="card" >
+	  	<div class="cardTitle small black-text"><b>hebergement</b></div>
+	<div id="hebergements_multi">
+	
+		<div id="hebergement_0">
+		<h2 align="center" id="name_hebergement_0"> hebergement 1 
+		</h2>
+		<div class="row">
+				
+				<div class="input-field col s2 m2 l1">
+					<label>Arrive</label>
+				</div>
+				<div class="input-field col s5 m5 l2" >  
+					<i class="material-icons prefix tooltipped" id="icone_date_arrive_hebergement_0" style="" data-tooltip="saisir_date_arriver">date_range</i>     
+ 			  		<input  type="text" data-validation="" data-validation-message="champ_obligatoire" class="datepicker" name="hebergements[0][date_arrive_hebergement]" id="date_arrive_hebergement_0" placeholder="jj_mm_aaaa"  onblur="testFunction(0);couleurIcone('date_arrive_hebergement_0')"/>
+				</div>
+				<div class="input-field col s5 m5 l2" >  
+					<i class="material-icons prefix tooltipped" id="icone_heure_arrive_hebergement_0" style="" data-tooltip="saisir_heure_arriver_format_24h">alarm</i>     
+ 			  		<input  data-validation-regex="" data-validation-message="champ_incorrect"  class=" timepicker" type="text" name="hebergements[0][heure_arrive_hebergement]" id="heure_arrive_hebergement_0" placeholder="hh_mm;"  onblur="couleurIcone('heure_arrive_hebergement_0')"/>
+				</div>
+	  			
+	  			<div class="input-field col s2 m2 l1 push-l2">
+					<label>depart</label>
+				</div>
+				<div class="input-field col s5 m5 l2 push-l2" >  
+					<i class="material-icons prefix tooltipped" id="icone_date_depart_hebergement_0" style="" data-tooltip="saisir_date_depart">date_range</i>     
+ 			  		<input  data-validation="" data-validation-message="champ_obligatoire"  type="text" class="datepicker" name="hebergements[0][date_depart_hebergement]" id="date_depart_hebergement_0" placeholder="jj_mm_aaaa"  onblur="testFunction(0);couleurIcone('date_depart_hebergement_0');"/>
+				</div>
+				<div class="input-field col s5 m5 l2 push-l2" >  
+					<i class="material-icons prefix tooltipped" id="icone_heure_depart_hebergement_0"  data-tooltip="saisir_heure_depart_format_24h">alarm</i>     
+ 			  		<input data-validation-regex="" data-validation-message="champ_incorrect" class="timepicker" type="text" name="hebergements[0][heure_depart_hebergement]" id="heure_depart_hebergement_0" placeholder="hh_mm"   onblur="couleurIcone('heure_depart_hebergement_0')"/>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s6 m3 l3">  
+					<input readonly class="readonly" id="nb_nuit_0" type="number" name="hebergements[0][nb_nuit]" min="0" placeholder="champ_automatique"/>
+					<label for="nb_nuit_0">nombre_nuit</label>
+				</div>
+				<div class="input-field col s6 m4 l4">  			
+	  				<input  class=" place-auto" type="text" name="hebergements[0][localisation]" onblur ="multiParametres('key_0',0)" id="localisation_0" />
+	  				<label for="localisation_0">localisation</label>
+	  			</div>
+				<div class="input-field col s6 m3 l3">  
+					<input  class="" id="nom_hotel_0" type=text name="hebergements[0][nom_hotel]" />
+					<label for="nom_hotel_0">nom_hotel</label>
+				</div>
+				<div class="switch col s6 m2 l2 center">
+					<a id="icone_parking_0" style="cursor: pointer;" class="tooltipped" data-tooltip="parking" onclick="toogleIcone('parking_0')">    
+			  			<i class='material-icons small'>local_parking</i>
+			  		</a>
+			  		<input type="hidden" id="parking_0" name="hebergements[0][parking]" />
+			  			&nbsp; &nbsp;
+			  		<a id="icone_petit_dejeuner_0" style="cursor: pointer;" class="tooltipped" data-tooltip="petit_dejeuner" onclick="toogleIcone('petit_dejeuner_0')">    
+			  			<i class='material-icons small'>restaurant</i>
+			  		</a>
+			  		<input type="hidden" id="petit_dejeuner_0" name="hebergements[0][petit_dejeuner]" value=""/>
+				</div>
+			</div>
+			<br>
+		<div class="row">
+			<div class="input-field col s12">
+				<textarea  class="materialize-textarea" 
+				length="500" 
+	  			name="hebergements[0][commentaire_hebergement]" 
+	  			id="commentaire_hebergement_0" ></textarea>
+	  			<label for="commentaire_hebergement_0">Commentaire</label>	
+			</div>
+		
+		
+		</div>
+		
+		
+		
+	</div>
+	
+		</div>
+			<div class="row">
+			<div class="input-field col s12 center">
+				<a class="add_suppr_hide tooltipped" style="cursor: pointer;" data-tooltip="ajouter_hebergement" onclick="ajouterHebergement()">
+			   			<i class="material-icons green circle white-text z-depth-1">add</i>
+			   		</a>
+			   		<a id="supprimer_hebergement" class="tooltipped" data-tooltip="supprimer_hebergement" style="cursor: pointer;" onclick="supprimerHebergement()">
+					<i class="material-icons red circle white-text">clear</i>
+				</a>
+		   		
+			</div>
+		</div>
+		
+	</div>
+	</div>
+
+</body>
+
+
+	<script type="text/javascript" src="/script/jquery-3.0.0.min.js"></script>
+	      <script type="text/javascript" src="/script/jquery.validation.js"></script>
+	      <script type="text/javascript" src="/script/jquery-ui.min.js"></script>
+	<script src="/script/materialize.min.js"></script>
+	<script src="/script/clonejs.js"></script>
+	<script src="/script/test.js"></script>
+</html>
